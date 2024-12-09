@@ -1,0 +1,513 @@
+#include <Wire.h>
+#include <Adafruit_MotorShield.h>
+#include "utility/Adafruit_MS_PWMServoDriver.h"
+
+Adafruit_MotorShield AFMS = Adafruit_MotorShield();
+Adafruit_DCMotor *myMotor = AFMS.getMotor(4);
+Adafruit_DCMotor *myMotor2 = AFMS.getMotor(3);
+Adafruit_DCMotor *myMotor3 = AFMS.getMotor(1);
+
+void setup() {
+  // put your setup code here, to run once:
+  AFMS.begin();
+}
+
+void loop() {
+  // put your main code here, to run repeatedly:
+  //Delay before starting
+  myMotor2->run(RELEASE);
+  delay(20000);
+
+  //Grab Colored pencil 1
+  myMotor->setSpeed(120);
+  myMotor->run(FORWARD);
+  delay(3650);
+
+  myMotor->run(RELEASE);
+  delay(3000);
+
+  //Lifts up elbow
+  myMotor2->setSpeed(120);
+  myMotor2->run(BACKWARD);
+  delay(3000);
+
+  myMotor2->run(RELEASE);
+  delay(3000);
+
+  //Take colored pencil to bin 1
+  /*myMotor3->setSpeed(120);
+  myMotor3->run(FORWARD);
+  delay(4000);
+
+  myMotor3->run(RELEASE);
+  delay(3000);*/
+  delay(6000);
+
+  //Lets go of colored pencil 1
+  myMotor->setSpeed(110);
+  myMotor->run(BACKWARD);
+  delay(3000);
+
+  myMotor->run(RELEASE);
+  delay(3000);
+
+  //Lifts up elbow even more
+  myMotor2->setSpeed(120);
+  myMotor2->run(BACKWARD);
+  delay(3000);
+
+  myMotor2->run(RELEASE);
+  delay(3000);
+
+  //Return to position 1 of colored pencil
+  /*myMotor3->setSpeed(140);
+  myMotor3->run(BACKWARD);
+  delay(5650);
+
+  myMotor3->run(RELEASE);
+  delay(3000);*/
+
+  //Going to position 2
+  delay(6000);
+  /*myMotor3->setSpeed(140);
+  myMotor3->run(BACKWARD);
+  delay(5650);
+
+  myMotor3->run(RELEASE);
+  delay(3000);*/
+
+  //Puts down elbow
+  myMotor2->setSpeed(100);
+  myMotor2->run(FORWARD);
+  delay(3000);
+
+  myMotor2->run(RELEASE);
+  delay(3000);
+  
+
+  //Puts down elbow even more
+  myMotor2->setSpeed(100);
+  myMotor2->run(FORWARD);
+  delay(2000);
+
+  myMotor2->run(RELEASE);
+  delay(3000);
+
+  //Grab Colored pencil 2
+  myMotor->setSpeed(120);
+  myMotor->run(FORWARD);
+  delay(3650);
+
+  myMotor->run(RELEASE);
+  delay(3000);
+
+  //Lifts up elbow
+  myMotor2->setSpeed(120);
+  myMotor2->run(BACKWARD);
+  delay(3000);
+
+  myMotor2->run(RELEASE);
+  delay(3000);
+
+  //Lifts up elbow even more
+  myMotor2->setSpeed(120);
+  myMotor2->run(BACKWARD);
+  delay(3000);
+
+  myMotor2->run(RELEASE);
+  delay(3000);
+
+  //Going to bin 1
+  delay(6000);
+  //Take colored pencil to bin 1
+  /*myMotor3->setSpeed(120);
+  myMotor3->run(FORWARD);
+  delay(6000);
+
+  myMotor3->run(RELEASE);
+  delay(3000);*/
+
+  //Puts down elbow
+  myMotor2->setSpeed(100);
+  myMotor2->run(FORWARD);
+  delay(3000);
+
+  myMotor2->run(RELEASE);
+  delay(3000);
+
+  //Lets go of colored pencil 2
+  myMotor->setSpeed(110);
+  myMotor->run(BACKWARD);
+  delay(3000);
+
+  myMotor->run(RELEASE);
+  delay(3000);
+
+  //Lifts up elbow even more
+  myMotor2->setSpeed(120);
+  myMotor2->run(BACKWARD);
+  delay(3000);
+
+  myMotor2->run(RELEASE);
+  delay(3000);
+
+  //Go to position 3
+  delay(8000);
+    /*myMotor3->setSpeed(140);
+  myMotor3->run(BACKWARD);
+  delay(8000);
+
+  myMotor3->run(RELEASE);
+  delay(3000);*/
+
+  //Puts down elbow
+  myMotor2->setSpeed(100);
+  myMotor2->run(FORWARD);
+  delay(3000);
+
+  myMotor2->run(RELEASE);
+  delay(3000);
+  
+
+  //Puts down elbow even more
+  myMotor2->setSpeed(100);
+  myMotor2->run(FORWARD);
+  delay(2000);
+
+  myMotor2->run(RELEASE);
+  delay(3000);
+
+  //Grab Colored pencil 3
+  myMotor->setSpeed(120);
+  myMotor->run(FORWARD);
+  delay(3650);
+
+  myMotor->run(RELEASE);
+  delay(3000);
+
+  //Lifts up elbow
+  myMotor2->setSpeed(120);
+  myMotor2->run(BACKWARD);
+  delay(3000);
+
+  myMotor2->run(RELEASE);
+  delay(3000);
+
+  //Lifts up elbow even more
+  myMotor2->setSpeed(120);
+  myMotor2->run(BACKWARD);
+  delay(3000);
+
+  myMotor2->run(RELEASE);
+  delay(3000);
+
+  //Going to bin 1
+  delay(6000);
+  //Take colored pencil to bin 1
+  /*myMotor3->setSpeed(120);
+  myMotor3->run(FORWARD);
+  delay(6000);
+
+  myMotor3->run(RELEASE);
+  delay(6000);*/
+  //Puts down elbow
+  myMotor2->setSpeed(100);
+  myMotor2->run(FORWARD);
+  delay(3000);
+
+  myMotor2->run(RELEASE);
+  delay(3000);
+
+  //Lets go of colored pencil 3
+  myMotor->setSpeed(110);
+  myMotor->run(BACKWARD);
+  delay(3000);
+
+  myMotor->run(RELEASE);
+  delay(3000);
+
+  //Lifts up elbow even more
+  myMotor2->setSpeed(120);
+  myMotor2->run(BACKWARD);
+  delay(3000);
+
+  myMotor2->run(RELEASE);
+  delay(3000);
+
+  //Go to position 4
+  delay(10000);
+    /*myMotor3->setSpeed(140);
+  myMotor3->run(BACKWARD);
+  delay(10000);
+
+  myMotor3->run(RELEASE);
+  delay(3000);*/
+
+  //Puts down elbow
+  myMotor2->setSpeed(100);
+  myMotor2->run(FORWARD);
+  delay(3000);
+
+  myMotor2->run(RELEASE);
+  delay(3000);
+  
+
+  //Puts down elbow even more
+  myMotor2->setSpeed(100);
+  myMotor2->run(FORWARD);
+  delay(2000);
+
+  myMotor2->run(RELEASE);
+  delay(3000);
+
+  //Grab Colored pencil 4
+  myMotor->setSpeed(120);
+  myMotor->run(FORWARD);
+  delay(3650);
+
+  myMotor->run(RELEASE);
+  delay(3000);
+
+  //Lifts up elbow
+  myMotor2->setSpeed(120);
+  myMotor2->run(BACKWARD);
+  delay(3000);
+
+  myMotor2->run(RELEASE);
+  delay(3000);
+
+  //Lifts up elbow even more
+  myMotor2->setSpeed(120);
+  myMotor2->run(BACKWARD);
+  delay(3000);
+
+  myMotor2->run(RELEASE);
+  delay(3000);
+
+  //Going to bin 2
+  delay(8000);
+  //Take colored pencil to bin 1
+  /*myMotor3->setSpeed(120);
+  myMotor3->run(FORWARD);
+  delay(8000);
+
+  myMotor3->run(RELEASE);
+  delay(3000);*/
+  //Puts down elbow
+  myMotor2->setSpeed(100);
+  myMotor2->run(FORWARD);
+  delay(3000);
+
+  myMotor2->run(RELEASE);
+  delay(3000);
+
+  //Lets go of colored pencil 3
+  myMotor->setSpeed(110);
+  myMotor->run(BACKWARD);
+  delay(3000);
+
+  myMotor->run(RELEASE);
+  delay(3000);
+
+  //Lifts up elbow even more
+  myMotor2->setSpeed(120);
+  myMotor2->run(BACKWARD);
+  delay(3000);
+
+  myMotor2->run(RELEASE);
+  delay(3000);
+
+  //Go to position 5
+  delay(12000);
+  /*myMotor3->setSpeed(140);
+  myMotor3->run(BACKWARD);
+  delay(12000);
+
+  myMotor3->run(RELEASE);
+  delay(3000);*/
+
+  //Puts down elbow
+  myMotor2->setSpeed(100);
+  myMotor2->run(FORWARD);
+  delay(3000);
+
+  myMotor2->run(RELEASE);
+  delay(3000);
+  
+
+  //Puts down elbow even more
+  myMotor2->setSpeed(100);
+  myMotor2->run(FORWARD);
+  delay(2000);
+
+  myMotor2->run(RELEASE);
+  delay(3000);
+
+  //Grab Colored pencil 5
+  myMotor->setSpeed(120);
+  myMotor->run(FORWARD);
+  delay(3650);
+
+  myMotor->run(RELEASE);
+  delay(3000);
+
+  //Lifts up elbow
+  myMotor2->setSpeed(120);
+  myMotor2->run(BACKWARD);
+  delay(3000);
+
+  myMotor2->run(RELEASE);
+  delay(3000);
+
+  //Lifts up elbow even more
+  myMotor2->setSpeed(120);
+  myMotor2->run(BACKWARD);
+  delay(3000);
+
+  myMotor2->run(RELEASE);
+  delay(3000);
+
+  //Going to bin 2
+  delay(10000);
+    //Take colored pencil to bin 1
+  /*myMotor3->setSpeed(120);
+  myMotor3->run(FORWARD);
+  delay(10000);
+
+  myMotor3->run(RELEASE);
+  delay(3000);*/
+  //Puts down elbow
+  myMotor2->setSpeed(100);
+  myMotor2->run(FORWARD);
+  delay(3000);
+
+  myMotor2->run(RELEASE);
+  delay(3000);
+
+  //Lets go of colored pencil 5
+  myMotor->setSpeed(110);
+  myMotor->run(BACKWARD);
+  delay(3000);
+
+  myMotor->run(RELEASE);
+  delay(3000);
+
+  //Lifts up elbow even more
+  myMotor2->setSpeed(120);
+  myMotor2->run(BACKWARD);
+  delay(3000);
+
+  myMotor2->run(RELEASE);
+  delay(3000);
+
+  //Go to position 6
+  delay(14000);
+  /*myMotor3->setSpeed(140);
+  myMotor3->run(BACKWARD);
+  delay(14000);
+
+  myMotor3->run(RELEASE);
+  delay(3000);*/
+
+  //Puts down elbow
+  myMotor2->setSpeed(100);
+  myMotor2->run(FORWARD);
+  delay(3000);
+
+  myMotor2->run(RELEASE);
+  delay(3000);
+  
+
+  //Puts down elbow even more
+  myMotor2->setSpeed(100);
+  myMotor2->run(FORWARD);
+  delay(2000);
+
+  myMotor2->run(RELEASE);
+  delay(3000);
+
+  //Grab Colored pencil 5
+  myMotor->setSpeed(120);
+  myMotor->run(FORWARD);
+  delay(3650);
+
+  myMotor->run(RELEASE);
+  delay(3000);
+
+  //Lifts up elbow
+  myMotor2->setSpeed(120);
+  myMotor2->run(BACKWARD);
+  delay(3000);
+
+  myMotor2->run(RELEASE);
+  delay(3000);
+
+  //Lifts up elbow even more
+  myMotor2->setSpeed(120);
+  myMotor2->run(BACKWARD);
+  delay(3000);
+
+  myMotor2->run(RELEASE);
+  delay(3000);
+
+  //Going to bin 2
+  delay(12000);
+    //Take colored pencil to bin 1
+  /*myMotor3->setSpeed(120);
+  myMotor3->run(FORWARD);
+  delay(12000);
+
+  myMotor3->run(RELEASE);
+  delay(3000);*/
+
+  //Puts down elbow
+  myMotor2->setSpeed(100);
+  myMotor2->run(FORWARD);
+  delay(3000);
+
+  myMotor2->run(RELEASE);
+  delay(3000);
+
+  //Lets go of colored pencil 5
+  myMotor->setSpeed(110);
+  myMotor->run(BACKWARD);
+  delay(3000);
+
+  myMotor->run(RELEASE);
+  delay(3000);
+
+  //Lifts up elbow even more
+  myMotor2->setSpeed(120);
+  myMotor2->run(BACKWARD);
+  delay(3000);
+
+  myMotor2->run(RELEASE);
+  delay(3000);
+
+  //Going to position 1
+  delay(4000);
+  /*myMotor3->setSpeed(140);
+  myMotor3->run(BACKWARD);
+  delay(4000);
+
+  myMotor3->run(RELEASE);
+  delay(3000);*/
+
+  //Puts down elbow
+  myMotor2->setSpeed(100);
+  myMotor2->run(FORWARD);
+  delay(3000);
+  
+
+  myMotor2->run(RELEASE);
+  delay(3000);
+  
+  //Puts down elbow even more
+  myMotor2->setSpeed(100);
+  myMotor2->run(FORWARD);
+  delay(2000);
+
+  myMotor2->run(RELEASE);
+  delay(3000);
+
+}
